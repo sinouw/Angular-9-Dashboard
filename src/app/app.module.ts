@@ -1,17 +1,16 @@
+import { ClientModule } from './layouts/client/client.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './core/components.module';
 
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { LoginComponent } from './layouts/client/login/login.component';
-import { RegisterComponent } from './layouts/client/register/register.component';
+
 
 @NgModule({
   imports: [
@@ -22,15 +21,11 @@ import { RegisterComponent } from './layouts/client/register/register.component'
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
-
+    ClientModule
   ],
   declarations: [
     AppComponent,
-    AdminLayoutComponent,
-    LoginComponent,
-    RegisterComponent,
-    
-
+    AdminLayoutComponent,    
   ],
   providers: [],
   bootstrap: [AppComponent]

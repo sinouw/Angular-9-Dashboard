@@ -6,7 +6,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
-    { path: 'user-profile',   component: UserProfileComponent },
+    { path: 'profile',   component: UserProfileComponent },
     { path: 'notifications',  component: NotificationsComponent },    
     { path:'events',loadChildren:()=> import('../../layouts/admin-layout/events/events.module').then(m=>m.EventsModule)},
     { path:'departments',loadChildren:()=> import('../../layouts/admin-layout/departments/departments.module').then(m=>m.DepartmentsModule)},
